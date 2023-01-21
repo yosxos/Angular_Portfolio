@@ -1,0 +1,133 @@
+#cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2px;
+    height: 30px;
+    margin-left: 5px;
+    animation: blink 0.75s step-end infinite;
+  }
+  .big-heading h1 {
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 80px);
+  }
+  
+  @keyframes blink {
+    from,
+    to {
+      background-color: transparent;
+    }
+    50% {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+  .grid {
+    padding: 100px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 100px;
+    column-gap: 0.5em;
+    grid-column-gap: 0.5em; /* for older browsers */
+    row-gap: 0.5em;
+    grid-row-gap: 0.5em; /* for older browsers */
+  }
+  #main{
+    background: url("https://i.imgur.com/yDIAh6H.png") center;
+  }
+  /*
+  About me
+  */
+  
+  .about {
+    margin: 0px auto;
+    padding: 200px 150px;
+    max-width: 900px;
+  }
+  
+  .resume {
+    padding: 100px;
+    margin: 0px auto;
+    max-width: 900px;
+    height: 1300px;
+  }
+  strong {
+    color: var(--green);
+  }
+  .grid h3 {
+    color: var(--green);
+  }
+  .grid_skill{
+    padding: 100px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 100px;
+    column-gap: 0.5em;
+    grid-column-gap: 0.5em; /* for older browsers */
+    row-gap: 0.5em;
+    grid-row-gap: 0.5em; /* for older browsers */
+  
+  }
+  .grid_skill span{
+    color: var(--green);
+  }
+  
+  .competences{
+    padding: 200px 150px;
+    margin: 0px auto;
+    max-width: 900px;
+    height: 1300px;
+  }
+  @media screen and (max-width: 600px) {
+    .about {
+      width: 70%;
+      padding: 200px 0px;
+      padding-bottom: 10px;
+    }
+    .resume {
+      width: 70%;
+      padding: 50px 0px;
+      height: 1300px;
+    }
+    .grid {
+      padding: 0px 45px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: 900px;
+      column-gap: 0.5em;
+      grid-column-gap: 0.5em; /* for older browsers */
+      row-gap: 0.5em;
+      grid-row-gap: 0.5em; /* for older browsers */
+    }
+    .grid_skill {
+      padding: 0px 45px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: 100px;
+      column-gap: 0.5em;
+      grid-column-gap: 0.5em; /* for older browsers */
+      row-gap: 0.5em;
+      grid-row-gap: 0.5em; /* for older browsers */
+    }
+    .competences{
+      padding: 900px 45px;
+    }
+  }
+  @-webkit-keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

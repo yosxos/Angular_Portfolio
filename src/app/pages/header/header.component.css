@@ -1,0 +1,125 @@
+/* Add a black background color to the top navigation */
+#navbar {
+    background-color: black;
+    position: fixed;
+    overflow: hidden;
+    float: none;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .navbar .content .link .content .title {
+    flex: 1;
+    color: #6d6e7e;
+  
+    max-width: 0px;
+    overflow: hidden;
+  }
+  /* Style the links inside the navigation bar */
+  #navbar a {
+    float: none;
+    color: var(--slate);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    display: inline;
+  }
+  
+  /* Change the color of links on hover */
+  #navbar a:hover {
+    background-color: black;
+    color: var(--green);
+  }
+
+  .eEjAsd {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 10vh;
+    height: 66vh;
+    padding: 0px;
+    padding-left: 10%;
+  }
+  
+  .eEjAsd h1 {
+    margin: 0px 0px 30px 4px;
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+    font-weight: 400;
+  }
+  h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  .eEjAsd h2 {
+    color: white;
+  }
+  h2 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 45px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  .big-heading {
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 80px);
+  }
+  .eEjAsd p {
+    text-align: center;
+    max-width: 540px;
+    font-size: clamp(5px, 8vw, 30px);
+  }
+  #hero p #text {
+    color: var(--green);
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #1443dd;
+    font-weight: bold;
+  }
+  
+  #hero {
+    width: 100%;
+    height: 100vh;
+    background: url('https://i.imgur.com/X09dWhp.jpg') center left;
+    background-size: cover;
+  }
+  section {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  
+  #cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2px;
+    height: 30px;
+    margin-left: 5px;
+    animation: blink 0.75s step-end infinite;
+  }
+  
+  @keyframes blink {
+    from,
+    to {
+      background-color: transparent;
+    }
+    50% {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+  @import '~bootstrap-icons/font/bootstrap-icons.css';
