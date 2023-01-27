@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import AOS from 'aos';
 @Component({
   selector: 'app-header',
@@ -8,7 +8,10 @@ import AOS from 'aos';
 export class HeaderComponent implements OnInit {
   constructor() {
     this.scroll();
+    //this.navbar();
   }
+  @Input() isExpanded: boolean = false;
+  @Output() toggleSidebar: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   ngOnInit() {
     AOS.init();
@@ -91,5 +94,9 @@ export class HeaderComponent implements OnInit {
         this._INTERVAL_VAL = setInterval(() => this.typeScript(), 100);
       }, 200);
     }
+  }
+  handleSidebarToggle() {
+    this.toggleSidebar.emit(!this.isExpanded);
+    this.isExpanded = !this.isExpanded;
   }
 }
