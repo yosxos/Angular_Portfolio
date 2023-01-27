@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import AOS from 'aos';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {
+  constructor(public breakpointObserver: BreakpointObserver) {
     this.scroll();
+    //this.navbar();
   }
+  @Input() isExpanded: boolean ;
+  @Output() toggleSidebar: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   ngOnInit() {
     AOS.init();
@@ -20,6 +24,15 @@ export class HeaderComponent implements OnInit {
     this._CURSOR = document.getElementById('cursor') as HTMLInputElement;
     // Start the typing effect on load
     this._INTERVAL_VAL = setInterval(() => this.typeScript(), 100);
+    this.breakpointObserver
+      .observe(['(min-width: 400px)'])
+      .subscribe((state: BreakpointState) => {
+        if (state.matches) {
+          this.isExpanded = true;
+        } else {
+          this.isExpanded = false;
+        }
+      });
   }
   // List of sentences
   _CONTENT = ['Developer', 'Junior', 'Cloud Ingineer'];
@@ -91,5 +104,9 @@ export class HeaderComponent implements OnInit {
         this._INTERVAL_VAL = setInterval(() => this.typeScript(), 100);
       }, 200);
     }
+  }
+  handleSidebarToggle() {
+    this.toggleSidebar.emit(!this.isExpanded);
+    this.isExpanded = !this.isExpanded;
   }
 }

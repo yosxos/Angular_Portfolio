@@ -10,7 +10,7 @@
     margin: 0px;
     font-size: clamp(40px, 8vw, 80px);
   }
-  
+
   @keyframes blink {
     from,
     to {
@@ -36,15 +36,16 @@
   /*
   About me
   */
-  
+
   .about {
     margin: 0px auto;
-    padding: 200px 150px;
+    padding: 200px;
     max-width: 900px;
+    padding-bottom: 310px;
   }
-  
+
   .resume {
-    padding: 100px;
+    padding-top: 200px;
     margin: 0px auto;
     max-width: 900px;
     height: 1300px;
@@ -64,17 +65,22 @@
     grid-column-gap: 0.5em; /* for older browsers */
     row-gap: 0.5em;
     grid-row-gap: 0.5em; /* for older browsers */
-  
+
   }
   .grid_skill span{
     color: var(--green);
   }
-  
+
   .competences{
     padding: 200px 150px;
     margin: 0px auto;
     max-width: 900px;
-    height: 1300px;
+    padding-bottom: 200px;
+  }
+  .projects{
+    padding: 200px 150px;
+    margin: 0px auto;
+    max-width: 900px;
   }
   @media screen and (max-width: 600px) {
     .about {
@@ -111,23 +117,11 @@
       padding: 900px 45px;
     }
   }
-  @-webkit-keyframes animate-loading {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes animate-loading {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
+  @media screen and (max-width="900"){
+    .about{
+      margin: 0px auto;
+      padding: 10px;
+      max-width: 900px;
+      padding-bottom: 310px;
     }
   }
-  

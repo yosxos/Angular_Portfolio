@@ -1,8 +1,12 @@
+<i class="mobile-nav-toggle d-xl-none" (click)="handleSidebarToggle()">
+  <span *ngIf="!isExpanded" class="bi bi-list"></span>
+  <span *ngIf="isExpanded" class="bi bi-x"></span>
+</i>
 <header>
-    <div id="navbar">
-      <a href="#about" class="nav-link"
-        ><i class="bi bi-person"></i> <span>About Me</span></a
-      >
+
+    <div id="navbar" class="nav" *ngIf="isExpanded">
+         <a href="#about" class="nav-link"
+        ><i class="bi bi-person"></i> <span>About Me</span></a>
       <a href="#resume" class="nav-link"
         ><i class="bi bi-file-person-fill"></i> <span>Resume</span></a
       >
@@ -13,13 +17,13 @@
         ><i class="bi bi-person-workspace"></i>
         <span>Expérience/Projects</span></a
       >
-      <a href="#Loisir" class="nav-link">
+      <a href="#loisir" class="nav-link">
         <i class="bi bi-balloon-heart-fill"></i>
         <span>Loisir</span></a
       >
     </div>
   </header>
-  <section id="hero" class="hero__StyledHeroSection-sc-116xg8t-0 eEjAsd">
+  <section id="hero" class="hero__StyledHeroSection-sc-116xg8t-0 Name">
     <div class="fadeup-enter-done">
       <h1>Hi,my name is</h1>
     </div>
@@ -30,6 +34,6 @@
       <p>I'm a <span id="text"></span><span id="cursor"></span></p>
       <p></p>
     </div>
-    
+
   </section>
-  
+
