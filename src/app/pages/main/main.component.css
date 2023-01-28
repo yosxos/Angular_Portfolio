@@ -95,6 +95,20 @@
     margin: 0px auto;
     max-width: 900px;
   }
+  .loisir {
+    margin: 0px auto;
+    padding: 200px;
+    max-width: 900px;
+    padding-bottom: 310px;
+  }
+  .loisir h2{
+    color: var(--green);
+  }
+  mdb-carousel {
+    padding: 100px 0px;
+    
+
+  }
   @media screen and (max-width: 600px) {
     .about {
       width: 70%;
