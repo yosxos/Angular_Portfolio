@@ -9,6 +9,7 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { MainComponent } from './pages/main/main.component';
 import {MatProgressBarModule}from '@angular/material/progress-bar';
+import {MdbCarouselModule} from 'mdb-angular-ui-kit/carousel'
 @NgModule({
   exports: [MatProgressBarModule],
 })
@@ -26,7 +27,8 @@ export class MaterialModule {}
     NgbModule,
     BrowserAnimationsModule,
     MaterialModule,
-    LayoutModule
+    LayoutModule,
+    MdbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
