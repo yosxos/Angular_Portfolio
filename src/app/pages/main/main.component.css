@@ -214,11 +214,14 @@
       padding-top:20px ;
     }
     .loisir{
-      padding: 200px 100px;
+      padding: 0px 100px;
     }
     .data-card:hover {
       background: #000000;
       transform: scale(1.02);
+    }
+    .data-card{
+      padding: 0px 10px;
     }
   }
   @media screen and (max-width="900"){
